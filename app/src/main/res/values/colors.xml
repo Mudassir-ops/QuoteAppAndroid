@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_color_one">#FFB940</color>
+    <color name="app_color_two">#FF9C40</color>
+    <color name="app_color_three">#FF5940</color>
+    <color name="selected_color">#FF5940</color>
+    <color name="un_selected_color">#FFAB94</color>
+    <color name="app_color_four">#FF405B</color>
+    <color name="app_color_five">#6D4199</color>
+    <color name="red_color">#FF405B</color>
+    <color name="nav_item_background">#DCD6D4</color>
+    <color name="color_selected">#FF405B</color>
+    <color name="bg_bottom_color">#1E1E1E</color>
+    <color name="color_unselected">#FFFFFFFF</color>
+    <color name="stroke_color">#333333</color>
+    <color name="view_color">#1E1E1E</color>
+</resources>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_screen"
+    tools:context=".fragment.settingFragment.SettingFragment">
+
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSetting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icDelete"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icDelete" />
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_black_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDailyQuotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/roboto_semibold"
+        android:text="Daily Quotes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomView" />
+
+
+    <View
+        android:id="@+id/viewShowDailyQuotes"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@id/txtDailyQuotes" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icShowDailyQuotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewShowDailyQuotes"
+        app:layout_constraintEnd_toStartOf="@id/txtShowDailyQuotesText"
+        app:layout_constraintStart_toStartOf="@id/viewShowDailyQuotes"
+        app:layout_constraintTop_toTopOf="@id/viewShowDailyQuotes"
+        app:srcCompat="@drawable/ic_show_daily_quotes" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtShowDailyQuotesText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Show Daily Quotes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icShowDailyQuotes"
+        app:layout_constraintEnd_toStartOf="@id/icShowDailyQuotesSwitch"
+        app:layout_constraintStart_toEndOf="@id/icShowDailyQuotes"
+        app:layout_constraintTop_toTopOf="@id/icShowDailyQuotes" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icShowDailyQuotesSwitch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewShowDailyQuotes"
+        app:layout_constraintEnd_toEndOf="@id/viewShowDailyQuotes"
+        app:layout_constraintStart_toEndOf="@id/txtShowDailyQuotesText"
+        app:layout_constraintTop_toTopOf="@id/viewShowDailyQuotes"
+        app:srcCompat="@drawable/switch_off" />
+
+
+    <View
+        android:id="@+id/viewShowNotificationsQuotes"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@id/viewShowDailyQuotes" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icShowNotificationsQuotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewShowNotificationsQuotes"
+        app:layout_constraintEnd_toStartOf="@id/txtShowNotificationsQuotesText"
+        app:layout_constraintStart_toStartOf="@id/viewShowNotificationsQuotes"
+        app:layout_constraintTop_toTopOf="@id/viewShowNotificationsQuotes"
+        app:srcCompat="@drawable/ic_show_notification" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtShowNotificationsQuotesText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Show Notifications"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icShowNotificationsQuotes"
+        app:layout_constraintEnd_toStartOf="@id/icShowNotificationsQuotesSwitch"
+        app:layout_constraintStart_toEndOf="@id/icShowNotificationsQuotes"
+        app:layout_constraintTop_toTopOf="@id/icShowNotificationsQuotes" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icShowNotificationsQuotesSwitch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewShowNotificationsQuotes"
+        app:layout_constraintEnd_toEndOf="@id/viewShowNotificationsQuotes"
+        app:layout_constraintStart_toEndOf="@id/txtShowNotificationsQuotesText"
+        app:layout_constraintTop_toTopOf="@id/viewShowNotificationsQuotes"
+        app:srcCompat="@drawable/switch_off" />
+
+    <View
+        android:id="@+id/viewDailyQuotesCount"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@id/viewShowNotificationsQuotes" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icDailyQuotesCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewDailyQuotesCount"
+        app:layout_constraintEnd_toStartOf="@id/txtDailyCountText"
+        app:layout_constraintStart_toStartOf="@id/viewDailyQuotesCount"
+        app:layout_constraintTop_toTopOf="@id/viewDailyQuotesCount"
+        app:srcCompat="@drawable/ic_daily_quotes" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDailyCountText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Daily Quote Count"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icDailyQuotesCount"
+        app:layout_constraintEnd_toStartOf="@id/txtDailyCountMinus"
+        app:layout_constraintStart_toEndOf="@id/icDailyQuotesCount"
+        app:layout_constraintTop_toTopOf="@id/icDailyQuotesCount" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDailyCountMinus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="−"
+        android:gravity="center"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/app_color_three"
+        app:layout_constraintEnd_toStartOf="@id/txtDailyCountValue"
+        app:layout_constraintBottom_toBottomOf="@id/viewDailyQuotesCount"
+        app:layout_constraintStart_toEndOf="@id/txtDailyCountText"
+        app:layout_constraintTop_toTopOf="@id/viewDailyQuotesCount" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDailyCountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:maxLength="2"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/txtDailyCountPlus"
+        app:layout_constraintBottom_toBottomOf="@id/viewDailyQuotesCount"
+        app:layout_constraintStart_toEndOf="@id/txtDailyCountMinus"
+        app:layout_constraintTop_toTopOf="@id/viewDailyQuotesCount" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDailyCountPlus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="+"
+        android:gravity="center"
+        android:textColor="@color/app_color_three"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewDailyQuotesCount"
+        app:layout_constraintEnd_toEndOf="@id/viewDailyQuotesCount"
+        app:layout_constraintStart_toEndOf="@id/txtDailyCountValue"
+        app:layout_constraintTop_toTopOf="@id/viewDailyQuotesCount" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSupportInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/roboto_semibold"
+        android:text="Support &amp; Info"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDailyQuotesCount"/>
+
+
+    <View
+        android:id="@+id/viewShareApp"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@id/txtSupportInfo" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icShareApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewShareApp"
+        app:layout_constraintEnd_toStartOf="@id/txtShareAppText"
+        app:layout_constraintStart_toStartOf="@id/viewShareApp"
+        app:layout_constraintTop_toTopOf="@id/viewShareApp"
+        app:srcCompat="@drawable/ic_share_app" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtShareAppText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Share App"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="@id/viewShareApp"
+        app:layout_constraintBottom_toBottomOf="@id/icShareApp"
+        app:layout_constraintStart_toEndOf="@id/icShareApp"
+        app:layout_constraintTop_toTopOf="@id/icShareApp" />
+
+
+    <View
+        android:id="@+id/viewRateUs"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@id/viewShareApp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icRateUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewRateUs"
+        app:layout_constraintEnd_toStartOf="@id/txtRateUsText"
+        app:layout_constraintStart_toStartOf="@id/viewRateUs"
+        app:layout_constraintTop_toTopOf="@id/viewRateUs"
+        app:srcCompat="@drawable/ic_rate_app" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtRateUsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Rate App"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="@id/viewRateUs"
+        app:layout_constraintBottom_toBottomOf="@id/icRateUs"
+        app:layout_constraintStart_toEndOf="@id/icRateUs"
+        app:layout_constraintTop_toTopOf="@id/icRateUs" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_screen"
+    tools:context=".fragment.todayFragment.TodayFragment">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icDownloadUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:srcCompat="@drawable/ic_download" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSetting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="Today"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icDownloadUp"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icDownloadUp" />
+
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_black_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/bottomView"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        android:text="No Today Quotes List"
+        android:id="@+id/txtNoList"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_semibold"
+        android:textSize="@dimen/_20sdp"/>
+
+
+    <android.widget.ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/bottomView"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="center"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todayRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/bottomView"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        tools:listitem="@layout/item_home"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

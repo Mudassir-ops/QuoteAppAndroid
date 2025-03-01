@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_view_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtLogout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rate Our App?"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/txtDescription"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:layout_constraintStart_toStartOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Your feedback helps us grow and keeps our experience amazing. If you’re enjoying the app, take a moment to rate us!"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@id/txtLogout"
+        app:layout_constraintStart_toStartOf="@id/txtLogout"
+        app:layout_constraintEnd_toEndOf="@id/topView"/>
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:max="5"
+        android:numStars="5"
+        android:paddingTop="@dimen/_10sdp"
+        android:progress="3"
+
+        android:progressDrawable="@drawable/rating_bar_full"
+        android:stepSize="1"
+        app:layout_constraintBottom_toTopOf="@id/txtCancel"
+        app:layout_constraintStart_toStartOf="@id/txtDescription"
+        app:layout_constraintTop_toBottomOf="@id/txtDescription" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        android:paddingVertical="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintEnd_toStartOf="@id/txtConfirm"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Done"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:textColor="@color/app_color_three"
+        app:layout_constraintBottom_toBottomOf="@id/txtCancel"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/txtCancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

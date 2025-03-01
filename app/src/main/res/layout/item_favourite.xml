@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/viewFavourite"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtQuotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="A Friend is someone who knows all about you and "
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/icFavourite"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:singleLine="true"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintBottom_toTopOf="@id/txtAuthorName"
+        app:layout_constraintStart_toStartOf="@id/viewFavourite"
+        app:layout_constraintTop_toTopOf="@id/viewFavourite" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAuthorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Elbert Hubbord"
+        android:fontFamily="@font/roboto_semibold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="@id/txtQuotes"
+        app:layout_constraintBottom_toBottomOf="@id/viewFavourite"
+        app:layout_constraintStart_toStartOf="@id/txtQuotes"
+        app:layout_constraintTop_toBottomOf="@id/txtQuotes" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icFavourite"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintStart_toEndOf="@id/txtQuotes"
+        app:layout_constraintBottom_toBottomOf="@id/viewFavourite"
+        app:layout_constraintEnd_toEndOf="@id/viewFavourite"
+        app:layout_constraintTop_toTopOf="@id/viewFavourite"
+        app:srcCompat="@drawable/ic_fav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

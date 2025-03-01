@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtQuotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_semibold"
+        android:gravity="center"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:paddingVertical="@dimen/_7sdp"
+        android:text="Success is not final, failure is not fatal: It is the courage to continue that counts."
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/white"
+        android:layout_marginVertical="@dimen/_14sdp"
+        app:layout_constraintBottom_toTopOf="@id/txtAuthorName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAuthorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_semibold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_7sdp"
+        android:text="Saqib Niazi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toTopOf="@id/icCopy"
+        app:layout_constraintEnd_toEndOf="@id/txtQuotes"
+        app:layout_constraintStart_toStartOf="@id/txtQuotes"
+        app:layout_constraintTop_toBottomOf="@id/txtQuotes"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@color/app_color_three"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@id/icFav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtQuotes"
+        app:layout_constraintTop_toBottomOf="@id/txtAuthorName"
+        app:srcCompat="@drawable/ic_copy" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="@id/txtQuotes"
+        app:layout_constraintStart_toEndOf="@id/icCopy"
+        app:layout_constraintTop_toTopOf="@id/icCopy"
+        app:layout_constraintBottom_toBottomOf="@id/icCopy"
+        app:srcCompat="@drawable/ic_favourite" />
+</androidx.constraintlayout.widget.ConstraintLayout>

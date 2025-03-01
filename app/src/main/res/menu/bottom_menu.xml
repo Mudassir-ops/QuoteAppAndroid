@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/txtHome"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/txtFavourite"
+        android:enabled="true"
+        android:icon="@drawable/ic_favourite"
+        android:title="Favourite" />
+    <item
+        android:id="@+id/txtToday"
+        android:enabled="true"
+        android:icon="@drawable/ic_today"
+        android:title="Today" />
+
+    <item
+        android:id="@+id/txtSetting"
+        android:enabled="true"
+        android:icon="@drawable/ic_setting"
+        android:title="Settings" />
+</menu>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_screen"
+    tools:context=".fragment.notificationFragment.NotificationFragment">
+
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:padding="@dimen/_4sdp"
+        android:tint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintStart_toStartOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:srcCompat="@drawable/ic_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="Notifications"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icBack"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icBack" />
+
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_black_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNotification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/roboto_semibold"
+        android:text="Daily Notifications"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toTopOf="@id/txtNotificationDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomView" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNotificationDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_semibold"
+        android:text="Allow us to setup your daily quotes and keep you motivated at your fingertips."
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintStart_toStartOf="@id/txtNotification"
+        app:layout_constraintTop_toBottomOf="@id/txtNotification" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNotificationStep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_semibold"
+        android:gravity="end"
+        android:text="Step 6 of 6"
+        android:textColor="@color/red_color"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintStart_toStartOf="@id/txtNotification"
+        app:layout_constraintTop_toBottomOf="@id/txtNotificationDescription" />
+
+    <View
+        android:id="@+id/viewStart"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@id/txtNotificationStep" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewStart"
+        app:layout_constraintEnd_toStartOf="@id/txtStartText"
+        app:layout_constraintStart_toStartOf="@id/viewStart"
+        app:layout_constraintTop_toTopOf="@id/viewStart"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtStartText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Start at"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icStart"
+        app:layout_constraintEnd_toStartOf="@id/txtStartPlus"
+        app:layout_constraintStart_toEndOf="@id/icStart"
+        app:layout_constraintTop_toTopOf="@id/icStart" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtStartPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="-"
+        android:textColor="@color/app_color_three"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toStartOf="@id/txtStartValue"
+        app:layout_constraintBottom_toBottomOf="@id/viewStart"
+        app:layout_constraintStart_toEndOf="@id/txtStartText"
+        app:layout_constraintTop_toTopOf="@id/viewStart" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtStartValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:00"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/txtStartMinus"
+        app:layout_constraintBottom_toBottomOf="@id/viewStart"
+        app:layout_constraintStart_toEndOf="@id/txtStartPlus"
+        app:layout_constraintTop_toTopOf="@id/viewStart" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtStartMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="+"
+        android:textColor="@color/app_color_three"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewStart"
+        app:layout_constraintEnd_toEndOf="@id/viewStart"
+        app:layout_constraintStart_toEndOf="@id/txtStartValue"
+        app:layout_constraintTop_toTopOf="@id/viewStart" />
+
+
+
+    <View
+        android:id="@+id/viewMinus"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_view"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@id/viewStart" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewMinus"
+        app:layout_constraintEnd_toStartOf="@id/txtMinusText"
+        app:layout_constraintStart_toStartOf="@id/viewMinus"
+        app:layout_constraintTop_toTopOf="@id/viewMinus"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMinusText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="End at"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/icMinus"
+        app:layout_constraintEnd_toStartOf="@id/txtEndPlus"
+        app:layout_constraintStart_toEndOf="@id/icMinus"
+        app:layout_constraintTop_toTopOf="@id/icMinus" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtEndPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="-"
+        android:textColor="@color/app_color_three"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toStartOf="@id/txtEndValue"
+        app:layout_constraintBottom_toBottomOf="@id/viewMinus"
+        app:layout_constraintStart_toEndOf="@id/txtMinusText"
+        app:layout_constraintTop_toTopOf="@id/viewMinus" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtEndValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02:00"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/txtEndMinus"
+        app:layout_constraintBottom_toBottomOf="@id/viewMinus"
+        app:layout_constraintStart_toEndOf="@id/txtEndPlus"
+        app:layout_constraintTop_toTopOf="@id/viewMinus" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtEndMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="+"
+        android:textColor="@color/app_color_three"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@id/viewMinus"
+        app:layout_constraintEnd_toEndOf="@id/viewMinus"
+        app:layout_constraintStart_toEndOf="@id/txtEndValue"
+        app:layout_constraintTop_toTopOf="@id/viewMinus" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/bg_orange_button"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
