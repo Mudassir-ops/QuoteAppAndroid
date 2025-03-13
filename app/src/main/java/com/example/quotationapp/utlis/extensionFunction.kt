@@ -29,6 +29,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.quotationapp.R
+import com.google.firebase.firestore.FirebaseFirestore
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -396,6 +397,20 @@ fun NumberPicker.setTextStyle(typeface: Typeface, textSize: Float, textColor: In
     } catch (e: Exception) {
         e.printStackTrace()
     }
+}
+
+fun checkFirestoreData() {
+    FirebaseFirestore.getInstance().collection("quotes").get()
+        .addOnSuccessListener { documents ->
+            if (!documents.isEmpty) {
+                Log.d("FirestoreCheck", "Data available")
+            } else {
+                Log.d("FirestoreCheck", "No data found")
+            }
+        }
+        .addOnFailureListener { exception ->
+            Log.e("FirestoreCheck", "Error fetching data", exception)
+        }
 }
 
 

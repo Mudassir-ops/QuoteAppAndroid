@@ -20,6 +20,7 @@ import com.example.quotationapp.fragment.quotesNumberFragment.QuotesRepository
 import com.example.quotationapp.fragment.settingFragment.SettingRepository
 import com.example.quotationapp.json.Quotes
 import com.example.quotationapp.notification.AlarmScheduler
+import com.example.quotationapp.utlis.checkFirestoreData
 import com.example.quotationapp.utlis.gone
 import com.example.quotationapp.utlis.toast
 import com.example.quotationapp.utlis.visible
@@ -66,11 +67,13 @@ class TodayFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         requestNotificationPermission()
         setupRecyclerView()
         quotesRepository.quotesNumber.observe(viewLifecycleOwner) { dailyQuoteLimit ->
             loadQuotes(dailyQuoteLimit)
         }
+        checkFirestoreData()
 
     }
 

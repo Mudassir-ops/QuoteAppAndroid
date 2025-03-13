@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "785773539886",
-    "project_id": "quotesapp-9a8ac",
-    "storage_bucket": "quotesapp-9a8ac.firebasestorage.app"
+    "project_number": "239177978849",
+    "project_id": "daily-quotes-or-affirmations",
+    "storage_bucket": "daily-quotes-or-affirmations.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:785773539886:android:a82424fdad4495373a25bf",
+        "mobilesdk_app_id": "1:239177978849:android:466b18d17721c1fc69f8a0",
         "android_client_info": {
-          "package_name": "com.example.quotationapp"
+          "package_name": "com.dailyquotes.affirmationsoftheday.motivational.wisewords.inpiring"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB2U9F1uCezSnGX7N6gaGI7aIYWm7CaFSo"
+          "current_key": "AIzaSyAB5iaTYVqUA-PY_svV6BNHpOX_nTxDhtI"
         }
       ],
       "services": {

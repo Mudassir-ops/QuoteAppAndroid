@@ -13,7 +13,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.quotationapp"
+        applicationId = "com.dailyquotes.affirmationsoftheday.motivational.wisewords.inpiring"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

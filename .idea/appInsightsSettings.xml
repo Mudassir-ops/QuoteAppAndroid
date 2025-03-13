@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.quotationapp" />
-                  <option name="mobileSdkAppId" value="1:785773539886:android:a82424fdad4495373a25bf" />
-                  <option name="projectId" value="quotesapp-9a8ac" />
-                  <option name="projectNumber" value="785773539886" />
+                  <option name="appId" value="com.dailyquotes.affirmationsoftheday.motivational.wisewords.inpiring" />
+                  <option name="mobileSdkAppId" value="1:239177978849:android:466b18d17721c1fc69f8a0" />
+                  <option name="projectId" value="daily-quotes-or-affirmations" />
+                  <option name="projectNumber" value="239177978849" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
